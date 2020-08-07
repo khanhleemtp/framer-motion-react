@@ -28,6 +28,7 @@ function Order({ pizza }) {
             opacity: 1,
         }
     }
+    
 
     return (
         <motion.div className="container order"
