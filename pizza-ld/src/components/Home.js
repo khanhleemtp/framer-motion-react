@@ -5,8 +5,9 @@ import { motion } from 'framer-motion';
 function Home() {
     return (
         <motion.div className="home container"
-            inital={{ opacity: 0 }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 1.5 }}
         >
             <h2>Welcome to pizza LD</h2>
             <Link to="/base">
