@@ -1,5 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+
 function Header() {
     return (
         <header>
@@ -17,11 +20,14 @@ function Header() {
                 </svg>
             </div>
 
-            <div className="title">
+            <motion.div className="title"
+                initial={{ y: -250 }}
+                animate={{ y: -10 }}
+            >
                 <Link to="/">
                     <h1>Pizza LD</h1>
                 </Link>
-            </div>
+            </motion.div>
             
         </header>
     )

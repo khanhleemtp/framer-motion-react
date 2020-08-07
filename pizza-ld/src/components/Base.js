@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion'
 
 function Base({ addBase, pizza }) {
 
     const bases = ['Classic', 'Thin & Crispy', 'Thick Crust'];
-    
+
     return (
         <div className="base container">
 
@@ -21,11 +22,14 @@ function Base({ addBase, pizza }) {
             </ul>
     
             {pizza.base && (
-            <div className="next">
+            <motion.div className="next"
+                initial={{ y: '-100vw'}}
+                animate={{ y: 0 }}
+            >
                 <Link to="/toppings">
                 <button>Next</button>
                 </Link>
-            </div>
+            </motion.div>
             )}
     
       </div>
