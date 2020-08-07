@@ -6,11 +6,41 @@ function Base({ addBase, pizza }) {
 
     const bases = ['Classic', 'Thin & Crispy', 'Thick Crust'];
 
+    const containerVariants = {
+        hidden: {
+            x: '100vw',
+            opacity: 0
+        },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transiton: {
+                type: 'spring',
+                stiffness: 120
+            }
+        }
+
+    }
+
+    const nextVariants = {
+        hidden: {
+            y: '-100vw'
+        },
+        visible: {
+            y: 0,
+            transiton: {
+                delay: 0.5,
+                type: 'spring',
+                stiffness: 120,
+            }
+        }
+    }
+
     return (
         <motion.div className="base container"
-            initial={{ x: '100vw'}}
-            animate={{ x: 0}}
-            transtion={{ delay: 0.5, type: 'spring', stiffness: 120 }}
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
         >
 
             <h3>Step 1: Choose Your Base</h3>
@@ -30,9 +60,7 @@ function Base({ addBase, pizza }) {
     
             {pizza.base && (
             <motion.div className="next"
-                initial={{ y: '-100vw'}}
-                animate={{ y: 0 }}
-                transtion={{ delay: 0.5, type: 'spring', stiffness: 120 }}
+                variants={nextVariants}
             >
                 <Link to="/toppings">
                 <motion.button
