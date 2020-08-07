@@ -6,8 +6,27 @@ function Toppings({ addTopping, pizza }) {
 
     let toppings = ['mushrooms', 'peppers', 'onions', 'olives', 'extra cheese', 'tomatoes'];
     
+    const containerVariants = {
+        hidden: {
+            x: '100vw',
+            opacity: 0
+        },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                type: 'spring',
+                stiffness: 120
+            }
+        }
+    }
+
     return (
-        <div className="toppings container">
+        <motion.div className="toppings container"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+        >
         
             <h3>Step 2: Choose Toppings</h3>
             <ul>
@@ -16,7 +35,7 @@ function Toppings({ addTopping, pizza }) {
                 return (
                 <motion.li key={topping} onClick={() => addTopping(topping)}
                     whileHover={{ scale: 1.3, originX: 0 ,color: '#f8e112'}}
-                    transtion={{ type: 'string', stiffness: 300 }}
+                    transition={{ type: 'string', stiffness: 300 }}
                 >
                     <span className={spanClass}>{ topping }</span>
                 </motion.li>
@@ -36,7 +55,7 @@ function Toppings({ addTopping, pizza }) {
             </motion.button>
             </Link>
     
-        </div>
+        </motion.div>
     )
 }
 

@@ -14,12 +14,11 @@ function Base({ addBase, pizza }) {
         visible: {
             x: 0,
             opacity: 1,
-            transiton: {
+            transition: {
                 type: 'spring',
                 stiffness: 120
             }
         }
-
     }
 
     const nextVariants = {
