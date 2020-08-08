@@ -107,7 +107,7 @@ li span.active::before{
 }
 
 /* Model */
-.backdrop {
+.backdrop{
   position: fixed;
   top: 0;
   left: 0;
@@ -117,7 +117,7 @@ li span.active::before{
   z-index: 1;
 }
 
-.modal {
+.modal{
   max-width: 400px;
   margin: 0 auto;
   padding: 40px 20px;
@@ -126,14 +126,23 @@ li span.active::before{
   text-align: center;
 }
 
-.modal button {
+.modal button{
   color: #444;
   border-color: #444;
   font-weight: bold;
   margin-top: 20px
 }
 
-.modal p {
+.modal p{
   color: #444;
   font-weight: bold;
+}
+
+/* Loader */
+.loader{
+  width: 10px;
+  height: 10px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 50%;
 }
