@@ -30,6 +30,10 @@ function Toppings({ addTopping, pizza }) {
                 type: 'spring',
                 stiffness: 120
             }
+        },
+        exit: {
+            x: '-100vw',
+            transition: { ease: 'easeInOut' } 
         }
     }
 
@@ -38,6 +42,7 @@ function Toppings({ addTopping, pizza }) {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
+            exit="exit"
         >
         
             <h3>Step 2: Choose Toppings</h3>
