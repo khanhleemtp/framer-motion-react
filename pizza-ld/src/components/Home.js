@@ -48,8 +48,8 @@ function Home() {
             >
                 Create Your Pizza
             </motion.button>
-            <Loader />
             </Link>
+            <Loader />
         </motion.div>
     )
 }
