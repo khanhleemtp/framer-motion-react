@@ -1,11 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
-
-function Base({ addBase, pizza }) {
-
-    const bases = ['Classic', 'Thin & Crispy', 'Thick Crust'];
-
     const containerVariants = {
         hidden: {
             x: '100vw',
@@ -46,6 +41,11 @@ function Base({ addBase, pizza }) {
             }
          }
     }
+function Base({ addBase, pizza }) {
+
+    const bases = ['Classic', 'Thin & Crispy', 'Thick Crust'];
+
+
 
     return (
         <motion.div className="base container"
